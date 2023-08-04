@@ -21,7 +21,7 @@ async function getSelfData(){
                           <i class="tf-icons bx bx-coin bx-tada"></i>
                         </button>
                         <button type="button" class="btn btn-outline-secondary">
-                          <i class="tf-icons bx bx-refresh bx-flip-horizontal bx-spin"></i>
+                          <i class="tf-icons bx bx-refresh bx-flip-vertical bx-spin"></i>
                         </button>
                         <button type="button" class="btn btn-outline-secondary">
                           <i class="tf-icons bx bx-comment-detail"></i>
