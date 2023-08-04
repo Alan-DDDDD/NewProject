@@ -31,6 +31,9 @@ async function getSelfData(){
                     <button type="button" class="btn btn-outline-secondary">
                       <i class="tf-icons bx bx-comment-detail"></i>
                     </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                      <i class="tf-icons bx bx-qr"></i>
+                    </button>
                 </div>
               </td>
             </tr>
