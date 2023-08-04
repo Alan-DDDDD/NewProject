@@ -1,7 +1,7 @@
 getSelfData();
 async function getSelfData(){
     const userid = "F111111111";
-    var response = await fetch("https://localhost:5001/api/Account/" + userid);
+    var response = await fetch("https://0180-61-222-180-215.ngrok-free.app/api/Account/" + userid);
     var body = await response.json();
     console.log(body);
     var table = $(`#AccountList tbody`);
