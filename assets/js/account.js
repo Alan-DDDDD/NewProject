@@ -4,7 +4,7 @@ async function getSelfData(){
     var response = await fetch("https://localhost:7285/api/Account/" + userid);
     var body = await response.json();
     console.log(body);
-    var table = $(`#accountList tbody`);
+    var table = $(`#AccountList tbody`);
     $.each(body,function(index,data){
         table.append(`
             <tr>
