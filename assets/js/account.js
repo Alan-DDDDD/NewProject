@@ -5,16 +5,18 @@ async function getSelfData(){
     var body = await response.json();
     console.log(body);
     var table = $(`#AccountList tbody`);
-    $.each(body,function(index,data){
-        table.append(`
+    if(body.status == 0){
+        $.each(body.data,function(index,data){
+            table.append(`
             <tr>
-                <td>${index+1}</td>
-                <td>${data.userid}</td>
-                <td>${data.bankname}</td>
-                <td>${data.bankcode}</td>
-                <td>${data.bankaccount}</td>
-                <td>${data.amount}</td>
+            <td>${index+1}</td>
+            <td>${data.userid}</td>
+            <td>${data.bankname}</td>
+            <td>${data.bankcode}</td>
+            <td>${data.bankaccount}</td>
+            <td>${data.amount}</td>
             </tr>
-        `);
-    });
+            `);
+        });
+    }
 }
