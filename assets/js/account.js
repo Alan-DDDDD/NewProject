@@ -18,7 +18,7 @@ async function getSelfData(){
                 <td>
                     <div class="btn-group" role="group" aria-label="Second group">
                         <button type="button" class="btn btn-outline-secondary">
-                          <i class="tf-icons bx bx-sort"></i>
+                          <i class="tf-icons bx bx-coin bx-tada"></i>
                         </button>
                         <button type="button" class="btn btn-outline-secondary">
                           <i class="tf-icons bx bx-transfer"></i>
