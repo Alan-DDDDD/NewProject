@@ -7,4 +7,10 @@ $(`#login`).on(`click`,async function (e){
     });
     var responseData = await response.json();
     console.log(responseData);
+    if(responseData.status == 0){
+        localStorage.setItem(`loginToken`,responseData.data.token);
+        if(localStorage.getItem(`backUrl`)){
+            open(localStorage.getItem(`backUrl`),"_self");
+        }
+    }
 })
