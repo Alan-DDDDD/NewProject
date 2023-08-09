@@ -9,10 +9,7 @@ async function checkToken(){
             }),
           });
         var responseData = await response.json();
-        if(responseData.status == 0){
-            data = responseData.data.url;
-        }
-        else{
+        if(responseData.status != 0){
             openLogin();
         }
     }
