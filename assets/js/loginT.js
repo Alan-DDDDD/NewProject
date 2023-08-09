@@ -1,5 +1,5 @@
-async function login(){
-    Event.preventDefault();
+$(`#login`).on(`click`,async function (e){
+    e.preventDefault();
     var formdata = new FormData()[0];
     var response = await fetch(`https://2884-61-222-180-215.ngrok-free.app/api/Login`,{
         method:"Post",
@@ -7,4 +7,4 @@ async function login(){
     });
     var responseData = await response.json();
     console.log(responseData);
-}
+})
