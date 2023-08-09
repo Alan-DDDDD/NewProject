@@ -22,9 +22,9 @@ async function getSelfData(){
               <td>${data.amount}</td>
               <td>
                 <div class="btn-group" role="group" aria-label="Second group">
-                    <a href="https://alan-ddddd.github.io/NewProject/html" class="btn btn-outline-secondary">
+                    <button type="button" class="btn btn-outline-secondary">
                       <i class="tf-icons bx bx-coin bx-tada"></i>
-                    </a>
+                    </button>
                     <button type="button" class="btn btn-outline-secondary">
                       <i class="tf-icons bx bx-refresh bx-flip-vertical bx-spin"></i>
                     </button>
