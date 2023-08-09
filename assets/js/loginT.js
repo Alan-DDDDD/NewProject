@@ -9,8 +9,10 @@ $(`#login`).on(`click`,async function (e){
     console.log(responseData);
     if(responseData.status == 0){
         localStorage.setItem(`loginToken`,responseData.data);
-        if(localStorage.getItem(`backUrl`)){
-            open(localStorage.getItem(`backUrl`),"_self");
+        let url = localStorage.getItem(`backUrl`)
+        if(url){
+            localStorage.removeItem(`backUrl`); 
+            open(url,"_self");
         }
     }
 })
