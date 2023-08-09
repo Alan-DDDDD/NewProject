@@ -31,7 +31,7 @@ async function getSelfData(){
                     <button type="button" class="btn btn-outline-secondary">
                       <i class="tf-icons bx bx-comment-detail"></i>
                     </button>
-                    <a href="#" class="btn btn-outline-secondary">
+                    <a href="https://chart.googleapis.com/chart?cht=qr&chs=100x100&chl=TWQRP%3A%2F%2F${data.bankcode}NTTransfer%2F158%2F02%2FV1%3FD6%3D0000699509320849%26D5%3D013%26D1%3D50000%26D10%3D901" class="btn btn-outline-secondary">
                       <img src="https://chart.googleapis.com/chart?cht=qr&chs=100x100&chl=TWQRP%3A%2F%2F${data.bankcode}NTTransfer%2F158%2F02%2FV1%3FD6%3D0000699509320849%26D5%3D013%26D1%3D50000%26D10%3D901" with="100" heigh="100" alt="一張圖片">
                     </a>
                 </div>
