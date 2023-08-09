@@ -9,10 +9,10 @@ async function checkToken(){
             data = responseData.data.url;
         }
         else{
-            open(data);
+            open(data,"_self");
         }
     }
     else{
-        open(data);
+        open(data,"_self");
     }
 }
