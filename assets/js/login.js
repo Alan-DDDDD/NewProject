@@ -2,7 +2,12 @@ checkToken();
 async function checkToken(){
     let token = localStorage.getItem(`loginToken`);
     if(token){
-        var response = await fetch(`https://2884-61-222-180-215.ngrok-free.app/api/Login/` + token);
+        var response = await fetch(`https://2884-61-222-180-215.ngrok-free.app/api/Login/` + token, {
+            method: "get",
+            headers: new Headers({
+              "ngrok-skip-browser-warning": "69420",
+            }),
+          });
         var responseData = await response.json();
         if(responseData.status == 0){
             data = responseData.data.url;
