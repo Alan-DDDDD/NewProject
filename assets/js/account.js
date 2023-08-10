@@ -5,7 +5,7 @@ async function getSelfData(){
         method: "get",
         headers: new Headers({
           "ngrok-skip-browser-warning": "69420",
-          "xToken":localStorage.getItem("loginToken")
+          "authorization":localStorage.getItem("loginToken")
         }),
       });
     var body = await response.json();
