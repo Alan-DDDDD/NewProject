@@ -41,4 +41,7 @@ async function getSelfData(){
             `);
         });
     }
+    else{
+      openLogin();
+    }
 }

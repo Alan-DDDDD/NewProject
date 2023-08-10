@@ -1,4 +1,4 @@
-checkToken();
+// checkToken();
 async function checkToken(){
     let token = localStorage.getItem(`loginToken`);
     if(token){
