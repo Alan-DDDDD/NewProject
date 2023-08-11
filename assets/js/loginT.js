@@ -2,7 +2,7 @@ $(`#login`).on(`click`,async function (e){
     e.preventDefault();
     var formdata = new FormData(formAuthentication);
     formdata.append(`check`,null);
-    var response = await fetch(`https://8643-61-222-180-215.ngrok-free.app/api/Login`,{
+    var response = await fetch(`https://f11c-61-222-180-215.ngrok-free.app/api/Login`,{
         method:"Post",
         body:formdata
     });
@@ -20,7 +20,7 @@ $(`#login`).on(`click`,async function (e){
         if(responseData.status == 1){
             var formdata = new FormData(formAuthentication);
             formdata.append(`check`,confirm(responseData.msg));
-            var response = await fetch(`https://8643-61-222-180-215.ngrok-free.app/api/Login`,{
+            var response = await fetch(`https://f11c-61-222-180-215.ngrok-free.app/api/Login`,{
                 method:"Post",
                 body:formdata
             });
@@ -39,7 +39,7 @@ $(`#login`).on(`click`,async function (e){
 })
 
 function callAPI(fprmdata){
-    var response = await fetch(`https://8643-61-222-180-215.ngrok-free.app/api/Login`,{
+    var response = await fetch(`https://f11c-61-222-180-215.ngrok-free.app/api/Login`,{
                 method:"Post",
                 body:formdata
             });
