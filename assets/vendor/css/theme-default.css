@@ -745,7 +745,7 @@ html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item .menu-lin
   background-color: rgba(67, 89, 113, 0.04);
 }
 .bg-menu-theme .menu-inner .menu-sub > .menu-item.active .menu-icon {
-  color: #696cff;
+  color: #9d9db5;
 }
 .bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
   color: #696cff;
