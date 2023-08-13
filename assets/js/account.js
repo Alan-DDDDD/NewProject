@@ -47,7 +47,7 @@ async function getSelfData(){
 }
 
 function　getQR(code,account){
-  var data = prompt("請問輸入轉帳金額");
+  var data = prompt("請問輸入收款金額");
   var money = Number(data);
   console.log(money);
   let url = "";
