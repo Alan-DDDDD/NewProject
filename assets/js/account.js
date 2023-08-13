@@ -53,5 +53,6 @@ function　getQR(code,account){
     alert("x");
   }
   let url = "https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=TWQRP%3A%2F%2F"&code&"NTTransfer%2F158%2F02%2FV1%3FD6%3D"&account&"%26D5%3D"&code&"%26D1%3D"&money*100&"%26D10%3D901";
-  open(url,"_block");
+  console.log(url);
+  //open(url,"_block");
 }
