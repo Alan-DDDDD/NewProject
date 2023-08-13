@@ -6633,8 +6633,8 @@ label.btn {
 }
 .btn-check:checked + .btn-danger, .btn-check:active + .btn-danger, .btn-danger:active, .btn-danger.active, .show > .btn-danger.dropdown-toggle {
   color: #fff;
-  background-color: #d93519;
-  border-color: #d93519;
+  background-color: rgba(154, 154, 164, 1);
+  border-color: rgba(154, 154, 164, 1);
 }
 .btn-check:checked + .btn-danger:focus, .btn-check:active + .btn-danger:focus, .btn-danger:active:focus, .btn-danger.active:focus, .show > .btn-danger.dropdown-toggle:focus {
   box-shadow: none;
