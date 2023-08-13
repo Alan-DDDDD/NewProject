@@ -45,3 +45,8 @@ async function getSelfData(){
       openLogin();
     }
 }
+
+function　getQR(code,account){
+  var money = prompt("請問輸入轉帳金額");
+  console.log(Number(money));
+}
