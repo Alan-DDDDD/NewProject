@@ -50,10 +50,11 @@ function　getQR(code,account){
   var money = Number(prompt("請問輸入轉帳金額"));
   console.log(money);
   let url = "";
+  console.log(code,account);
   if(money == (0 || "NaN")){
     url = `https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=TWQRP%3A%2F%2F${code}NTTransfer%2F158%2F02%2FV1%3FD6%3D${account}%26D5%3D${code}%26D10%3D901`;
   }
   url = `https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=TWQRP%3A%2F%2F${code}NTTransfer%2F158%2F02%2FV1%3FD6%3D${account}%26D5%3D${code}%26D1%3D${money*100}%26D10%3D901`;
-  //console.log(url);
+  console.log(url);
   open(url,"_block");
 }
