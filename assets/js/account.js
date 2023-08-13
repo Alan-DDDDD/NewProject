@@ -49,4 +49,8 @@ async function getSelfData(){
 function　getQR(code,account){
   var money = prompt("請問輸入轉帳金額");
   console.log(Number(money));
+  if(money == 0 || "NaN"){
+    alert("x");
+  }
+  let url = "https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=TWQRP%3A%2F%2F"&C4&"NTTransfer%2F158%2F02%2FV1%3FD6%3D"&D4&"%26D5%3D"&C4&"%26D1%3D"&E4*100&"%26D10%3D901"
 }
