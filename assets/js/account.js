@@ -47,8 +47,8 @@ async function getSelfData(){
 }
 
 function　getQR(code,account){
-  var money = prompt("請問輸入轉帳金額");
-  console.log(Number(money));
+  var money = Number(prompt("請問輸入轉帳金額"));
+  console.log(money);
   if(money == (0 || "NaN")){
     alert("x");
   }
