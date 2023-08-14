@@ -80,7 +80,7 @@ function appendData(data){
                       </div>
                       <div class="card-subtitle mb-3">(${code})${account}</div>
                       <p class="card-text">
-                        <h5>餘額:${amount}</h5>
+                        <h5>餘額:${data.amount}</h5>
                       </p>
                       <div style="display: flex;">
                         <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
