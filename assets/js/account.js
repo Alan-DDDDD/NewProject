@@ -70,7 +70,7 @@ function appendData(data){
   let code = data.bankCode || "";
   let name = data.accountName;
   let account = data.bankAccount || "";
-  let amount = data.amount;
+  let amount = data.amount.toString();
   var model = `
                   <div class="card mb-4" style="background-color: rgba(154, 154, 164, 0.26);box-shadow: 5px 5px 10px 5px gray;">
                     <div class="card-body">
@@ -80,7 +80,7 @@ function appendData(data){
                       </div>
                       <div class="card-subtitle mb-3">(${code})${account}</div>
                       <p class="card-text">
-                        <h5>餘額:${data.amount}</h5>
+                        <h5>餘額:${amount}</h5>
                       </p>
                       <div style="display: flex;">
                         <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
