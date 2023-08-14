@@ -68,7 +68,7 @@ function　getQR(code,account){
 
 function appendData(data){
   let code = data.bankCode || "";
-  let name = data.bankName;
+  let name = data.accountName;
   let account = data.bankAccount || "";
   let amount = data.amount;
   var model = `
