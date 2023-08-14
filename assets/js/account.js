@@ -2,7 +2,7 @@ getSelfData();
 async function getSelfData(){
     //const userid = "F111111111";
     const userid = "F128933062";
-    var response = await fetch(url + "/api/Account/" + userid, {
+    var response = await fetch(url + "/api/Account/", {
         method: "get",
         headers: new Headers({
           "ngrok-skip-browser-warning": "69420",
