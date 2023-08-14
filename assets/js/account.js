@@ -75,12 +75,12 @@ function appendData(data){
                   <div class="card mb-4" style="background-color: rgba(154, 154, 164, 0.26);box-shadow: 5px 5px 10px 5px gray;">
                     <div class="card-body">
                       <div style="display: flex;margin-bottom: 0.875rem;">
-                        <img src="../assets/img/icons/${data.bankCode}.jpg" style="width:5%;border-radius: 10%;"/>
-                        <h5 class="card-title" style="margin-left: 2%;">${data.bankName}</h5>
+                        <img src="../assets/img/icons/${code}.jpg" style="width:5%;border-radius: 10%;"/>
+                        <h5 class="card-title" style="margin-left: 2%;">${name}</h5>
                       </div>
-                      <div class="card-subtitle mb-3">(${data.bankCode})${data.bankAccount}</div>
+                      <div class="card-subtitle mb-3">(${code})${account}</div>
                       <p class="card-text">
-                        <h5>餘額:${data.Amount}</h5>
+                        <h5>餘額:${amount}</h5>
                       </p>
                       <div style="display: flex;">
                         <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
@@ -88,7 +88,7 @@ function appendData(data){
                         <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-comment-detail">細節</a>
                         `
 if(code != ""){
-  model +=`<a href="javascript:getQR('${data.bankCode}','${data.bankAccount}')" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-qr">QRcode</a>`
+  model +=`<a href="javascript:getQR('${code}','${account}')" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-qr">QRcode</a>`
 }
 model+=` </div></div></div> `
   $(`#dataList`).append(model);
