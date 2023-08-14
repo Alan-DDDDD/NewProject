@@ -2,7 +2,7 @@ $(`#login`).on(`click`,async function (e){
     e.preventDefault();
     var formdata = new FormData(formAuthentication);
     formdata.append(`check`,null);
-    var response = await fetch(`https://77f8-61-222-180-215.ngrok-free.app/api/Login`,{
+    var response = await fetch(`${url}/api/Login`,{
         method:"Post",
         body:formdata
     });
@@ -20,7 +20,7 @@ $(`#login`).on(`click`,async function (e){
         if(responseData.status == 1){
             var formdata = new FormData(formAuthentication);
             formdata.append(`check`,confirm(responseData.msg));
-            var response = await fetch(`https://77f8-61-222-180-215.ngrok-free.app/api/Login`,{
+            var response = await fetch(`${url}/api/Login`,{
                 method:"Post",
                 body:formdata
             });
