@@ -1,6 +1,7 @@
 getSelfData();
 async function getSelfData(){
-    const userid = "F111111111";
+    //const userid = "F111111111";
+    const userid = "F128933062";
     var response = await fetch(url + "/api/Account/" + userid, {
         method: "get",
         headers: new Headers({
