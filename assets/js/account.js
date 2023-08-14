@@ -39,26 +39,7 @@ async function getSelfData(){
             //   </td>
             // </tr>
             // `);
-            $(`#dataList`).append(`
-                  <div class="card mb-4" style="background-color: rgba(154, 154, 164, 0.26);box-shadow: 5px 5px 10px 5px gray;">
-                    <div class="card-body">
-                      <div style="display: flex;margin-bottom: 0.875rem;">
-                        <img src="../assets/img/icons/${data.bankcode}.jpg" style="width:5%;border-radius: 10%;"/>
-                        <h5 class="card-title" style="margin-left: 2%;">${data.bankname}</h5>
-                      </div>
-                      <div class="card-subtitle mb-3">(${data.bankcode})${data.bankaccount}</div>
-                      <p class="card-text">
-                        <h5>餘額:${data.amount}</h5>
-                      </p>
-                      <div style="display: flex;">
-                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
-                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-refresh">轉帳</a>
-                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-comment-detail">細節</a>
-                        <a href="javascript:getQR('${data.bankcode}','${data.bankaccount}')" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-qr">QRcode</a>
-                      </div>
-                    </div>
-                  </div>
-            `);
+            appendData(data);
         });
     }
     else{
@@ -82,4 +63,27 @@ function　getQR(code,account){
     console.log(url);
     open(url,"_block");
   }
+}
+
+function appendData(data){
+  $(`#dataList`).append(`
+                  <div class="card mb-4" style="background-color: rgba(154, 154, 164, 0.26);box-shadow: 5px 5px 10px 5px gray;">
+                    <div class="card-body">
+                      <div style="display: flex;margin-bottom: 0.875rem;">
+                        <img src="../assets/img/icons/${data.bankcode}.jpg" style="width:5%;border-radius: 10%;"/>
+                        <h5 class="card-title" style="margin-left: 2%;">${data.bankname}</h5>
+                      </div>
+                      <div class="card-subtitle mb-3">(${data.bankcode})${data.bankaccount}</div>
+                      <p class="card-text">
+                        <h5>餘額:${data.amount}</h5>
+                      </p>
+                      <div style="display: flex;">
+                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
+                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-refresh">轉帳</a>
+                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-comment-detail">細節</a>
+                        <a href="javascript:getQR('${data.bankcode}','${data.bankaccount}')" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-qr">QRcode</a>
+                      </div>
+                    </div>
+                  </div>
+            `);
 }
