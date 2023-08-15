@@ -9,8 +9,10 @@ Add
         accountReport
             public IActionResult getAccount(){}; //account
                 return List<accountReport>;
-            public IActionResult getReport(string month = Datetime.Now().getMonth.ToString(),string year = Datetime.Now().getYear().ToString()){}; //_context.trades.where(x=>x.datetime.getMonth() == Datetime.Now().getMonth() && x.datetime.getYear() == Datetime.Now().getYear())
+            public IActionResult getMonthReport(string month = Datetime.Now().getMonth.ToString(),string year = Datetime.Now().getYear().ToString()){}; //_context.trades.where(x=>x.datetime.getMonth() == Datetime.Now().getMonth() && x.datetime.getYear() == Datetime.Now().getYear())
                 return List<Report>;
+            public IActionResult getYearReport()
+                return Lsit<Report>;
     ViewModels
         ? public class accountReport(){
             public string type {get;set;}

@@ -2,7 +2,7 @@ getSelfData();
 async function getSelfData(){
     //const userid = "F111111111";
     const userid = "F128933062";
-    //var apis = ["/api/getAccount/","/api/getReport/"];
+    //var apis = ["getAccount","getMonthReport","getYearReport"];
     var apis = ["Account"];
     $.each(apis,async function(index,item){
         await api(item);
@@ -27,6 +27,12 @@ async function api(api){
             switch (api){
                 case "Account":
                     appendData(data);
+                    break;
+                case "getMonthReport":
+                    appendMonthData();
+                    break;
+                case "getYearReport":
+                    appendYearData();
                     break;
             }
         });
