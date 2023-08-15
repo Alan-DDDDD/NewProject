@@ -67,29 +67,30 @@ function　getQR(code,account){
 }
 
 function appendData(data){
-  let code = data.bankCode || "";
+  let code = data.bankCode || data.currency;
   let name = data.accountName;
-  let account = data.bankAccount || "";
+  let account = data.bankAccount || "x";
   let amount = data.amount.toString();
+  let type = data.currency;
   var model = `
                   <div class="card mb-4" style="background-color: rgba(154, 154, 164, 0.26);box-shadow: 5px 5px 10px 5px gray;">
                     <div class="card-body">
                       <div style="display: flex;margin-bottom: 0.875rem;">
                         <img src="../assets/img/icons/${code}.jpg" style="width:5%;border-radius: 10%;"/>
                         <h5 class="card-title" style="margin-left: 2%;">${name}</h5>
-                      </div>
-                      <div class="card-subtitle mb-3">(${code})${account}</div>
-                      <p class="card-text">
-                        <h5>餘額:${amount}</h5>
-                      </p>
-                      <div style="display: flex;">
-                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
-                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-refresh">轉帳</a>
-                        <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-comment-detail">細節</a>
-                        `
-if(code != ""){
-  model +=`<a href="javascript:getQR('${code}','${account}')" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-qr">QRcode</a>`
-}
-model+=` </div></div></div> `
-  $(`#dataList`).append(model);
+                      </div>`
+      model += account != "x" ?  `<div class="card-subtitle mb-3"></div>` : `<div class="card-subtitle mb-3">(${code})${account}</div>`
+      model += `<p class="card-text">
+                <h5>餘額:${amount}</h5>
+                 </p>
+                 <div style="display: flex;">
+                <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-coin">交易</a>
+                <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-refresh">轉帳</a>
+                <a href="javascript:void(0)" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-comment-detail">細節</a>
+                `
+      if(account != "x"){
+        model +=`<a href="javascript:getQR('${code}','${account}')" style="margin: 0 auto;color:#566a7f;" class="tf-icons bx bx-qr">QRcode</a>`
+      }
+      model+=` </div></div></div> `
+        $(`#dataList`).append(model);
 }
