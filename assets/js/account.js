@@ -76,7 +76,7 @@ function appendData(data){
                   <div class="card mb-4" style="background-color: rgba(154, 154, 164, 0.26);box-shadow: 5px 5px 10px 5px gray;">
                     <div class="card-body">
                       <div style="display: flex;margin-bottom: 0.875rem;">
-                        <img src="../assets/img/icons/${code}.jpg" style="width:5%;border-radius: 10%;"/>
+                        <img src="../assets/img/icons/account/${code}.jpg" style="width:5%;border-radius: 10%;"/>
                         <h5 class="card-title" style="margin-left: 2%;">${name}</h5>
                       </div>`
       model += account != "x" ?  `<div class="card-subtitle mb-3"></div>` : `<div class="card-subtitle mb-3">(${code})${account}</div>`
