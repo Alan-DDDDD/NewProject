@@ -14,7 +14,7 @@ async function getSelfData(){
     var table = $(`#AccountList tbody`);
     if(body.status == 0){
         $.each(body.data,function(index,data){
-            if(data.visable == 1 && data.able == 1){
+            if(data.visable == 1 && data.able == 1){ //改寫在後端
               appendData(data);
             }
         });

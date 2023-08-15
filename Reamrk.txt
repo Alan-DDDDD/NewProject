@@ -2,6 +2,9 @@ Add
     SQL
         Account Table
             type column (for accountReport > account)
+            order column (for account > order by)
+        User Table
+            Password column
     API
         accountReport
             public IActionResult getAccount(){}; //account
@@ -21,3 +24,6 @@ Add
 HTML
     accountReport
         MonthReport & YearReport -> table
+Update
+    API
+        api/account/id -> add visable,able condition and order by order
