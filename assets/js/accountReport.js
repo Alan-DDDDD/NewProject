@@ -30,6 +30,8 @@ function appendData(data){
                             </td>
                        </tr>
     `);
+    var cul = $(`#Allcash`).text().spile(`:`)[1]+data.amount;
+    $(`#Allcash`).append(`現金帳戶 : ${cul}`);
 }
 
 function appendMonthData(data){
