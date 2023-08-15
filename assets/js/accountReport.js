@@ -3,7 +3,7 @@ async function getSelfData(){
     //const userid = "F111111111";
     const userid = "F128933062";
     //var apis = ["/api/getAccount/","/api/getReport/"];
-    var apis = ["Account","getReport"];
+    var apis = ["Account"];
     $.each(apis,async function(index,item){
         await api(item);
     });
