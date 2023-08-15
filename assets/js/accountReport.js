@@ -32,7 +32,8 @@ function appendData(data){
     `);
     var old = $(`#Allcash`).text().split(`:`)[1].trim();
     var cul = old == "" ? data.amount : Number(old) + data.amount;
-    $(`#Allcash`).append(`現金帳戶 : ${cul}`);
+
+    $(`#Allcash`).text(`現金帳戶 : ${cul}`);
 }
 
 function appendMonthData(data){
