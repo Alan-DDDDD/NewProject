@@ -12,7 +12,7 @@ async function getSelfData(){
 
 async function api(api){
     let apiDetail = `/api/${api}/`;
-    var response = await fetch(url + api, {
+    var response = await fetch(url + apiDetail, {
         method: "get",
         headers: new Headers({
           "ngrok-skip-browser-warning": "69420",
