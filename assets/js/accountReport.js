@@ -5,12 +5,12 @@ async function getSelfData(){
     //var apis = ["/api/getAccount/","/api/getReport/"];
     var apis = ["Account","getReport"];
     $.each(apis,function(index,api){
-        api(api);
+        await api(api);
     });
     
 }
 
-function api(api){
+async function api(api){
     let apiDetail = `/api/${api}/`;
     var response = await fetch(url + api, {
         method: "get",
