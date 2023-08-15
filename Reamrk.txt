@@ -1,0 +1,23 @@
+Add
+    SQL
+        Account Table
+            type column (for accountReport > account)
+    API
+        accountReport
+            public IActionResult getAccount(){}; //account
+                return List<accountReport>;
+            public IActionResult getReport(string month = Datetime.Now().getMonth.ToString(),string year = Datetime.Now().getYear().ToString()){}; //_context.trades.where(x=>x.datetime.getMonth() == Datetime.Now().getMonth() && x.datetime.getYear() == Datetime.Now().getYear())
+                return List<Report>;
+    ViewModels
+        ? public class accountReport(){
+            public string type {get;set;}
+            public List<account> dataList{get;set;}
+        }
+        public class Report(){
+            public string item {get;set;}
+            public string type {get;set;}
+            public double money {get;set;}
+        }
+HTML
+    accountReport
+        MonthReport & YearReport -> table

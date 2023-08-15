@@ -14,7 +14,9 @@ async function getSelfData(){
     var table = $(`#AccountList tbody`);
     if(body.status == 0){
         $.each(body.data,function(index,data){
-            appendData(data);
+            if(data.visable == 1 && data.able == 1){
+              appendData(data);
+            }
         });
     }
     else{
