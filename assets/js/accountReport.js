@@ -12,11 +12,23 @@ async function getSelfData(){
 
 async function api(api){
     let apiDetail = `/api/${api}/`;
+    let token = localStorage.getItem("loginToken");
+    switch (api){
+        case "Account":
+            apiDetail += `token=${token}`;
+            break;
+        case "getMonthReport":
+            apiDetail += `token=${token}&month=${month}&year=${year}`;
+            break;
+        case "getYearReport":
+            apiDetail += `token=${token}&year=${year}`;
+            break;
+    }
     var response = await fetch(url + apiDetail, {
         method: "get",
         headers: new Headers({
           "ngrok-skip-browser-warning": "69420",
-          "authorization":localStorage.getItem("loginToken")
+          "authorization":token
         }),
       });
     var body = await response.json();
