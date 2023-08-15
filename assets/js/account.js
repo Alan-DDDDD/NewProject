@@ -79,7 +79,7 @@ function appendData(data){
                         <img src="../assets/img/icons/account/${code}.jpg" style="width:5%;border-radius: 10%;"/>
                         <h5 class="card-title" style="margin-left: 2%;">${name}</h5>
                       </div>`
-      model += account == "x" ?  `<div class="card-subtitle mb-3"></div>` : `<div class="card-subtitle mb-3">(${code})${account}</div>`
+      model += account == "x" ?  `<div class="card-subtitle mb-3">(${code})</div>` : `<div class="card-subtitle mb-3">(${code})${account}</div>`
       model += `<p class="card-text">
                 <h5>餘額:${amount}</h5>
                  </p>
