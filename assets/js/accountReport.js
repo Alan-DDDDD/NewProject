@@ -50,7 +50,7 @@ async function api(api){
         });
     }
     else{
-      //openLogin();
+      openLogin();
     }
 }
 
