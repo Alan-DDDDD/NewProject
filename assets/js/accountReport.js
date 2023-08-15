@@ -30,6 +30,7 @@ function appendData(data){
                             </td>
                        </tr>
     `);
+    var old = $(`#Allcash`).text().split(`:`)[1];
     var cul = $(`#Allcash`).text().split(`:`)[1] == "" ? data.amount : Number($(`#Allcash`).text().split(`:`)[1]) + data.amount;
     $(`#Allcash`).append(`現金帳戶 : ${cul}`);
 }
