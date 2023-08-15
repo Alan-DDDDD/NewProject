@@ -14,7 +14,7 @@ async function api(api){
     let apiDetail = `/api/${api}/`;
     let token = localStorage.getItem("loginToken");
     switch (api){
-        case "Account":
+        case "getAccount":
             apiDetail += `token=${token}`;
             break;
         case "getMonthReport":
