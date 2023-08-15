@@ -2,8 +2,17 @@ getSelfData();
 async function getSelfData(){
     //const userid = "F111111111";
     const userid = "F128933062";
-    var api = ["/api/getAccount/","/api/getReport/"];
-    var response = await fetch(url + "/api/Account/", {
+    //var apis = ["/api/getAccount/","/api/getReport/"];
+    var apis = ["Account","getReport"];
+    $.each(apis,function(index,api){
+        api(api);
+    });
+    
+}
+
+function api(api){
+    let apiDetail = `/api/${api}/`;
+    var response = await fetch(url + api, {
         method: "get",
         headers: new Headers({
           "ngrok-skip-browser-warning": "69420",
@@ -15,7 +24,11 @@ async function getSelfData(){
     var table = $(`#AccountList tbody`);
     if(body.status == 0){
         $.each(body.data,function(index,data){
-            appendData(data);
+            switch (api){
+                case "Account":
+                    appendData(data);
+                    breake;
+            }
         });
     }
     else{
@@ -38,9 +51,9 @@ function appendData(data){
 }
 
 function appendMonthData(data){
-
+    $(`#month`)
 }
 
 function appendYearData(data){
-
+    $(`#year`)
 }
