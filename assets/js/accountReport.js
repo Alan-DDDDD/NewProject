@@ -27,7 +27,7 @@ async function api(api){
             switch (api){
                 case "Account":
                     appendData(data);
-                    breake;
+                    break;
             }
         });
     }
