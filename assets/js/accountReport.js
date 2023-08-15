@@ -4,7 +4,7 @@ async function getSelfData(){
     const userid = "F128933062";
     //var apis = ["/api/getAccount/","/api/getReport/"];
     var apis = ["Account","getReport"];
-    $.each(apis,function(index,api){
+    $.each(apis,async function(index,api){
         await api(api);
     });
     
