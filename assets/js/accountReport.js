@@ -55,7 +55,7 @@ async function api(api){
 }
 
 function appendData(data){
-    $(`#cash`).append(`<tr>
+    $(`#acash`).append(`<tr>
                             <td class="align-middle">${data.accountName}</td>
                             <td class="py-3">
                               <p class="mb-0">${data.amount}</p>
