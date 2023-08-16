@@ -907,12 +907,15 @@
                                 <div class="accordion-body">
                                   <table class="table">
                                     <tbody>
-                                      <tr>
+                                      <tr data-bs-target="#USD" aria-controls="USD">
                                         <td class="align-middle">美金</td>
                                         <td class="py-3">
                                           <p class="mb-0">5000 (匯率 30.02)</p>
                                         </td>
                                       </tr>
+                                      <div id="USD">
+                                        <iframe src="https://tw.rter.info/24hr.php?iso=USD" width="100%" scrolling="no" frameborder="0"></iframe>
+                                      </div>
                                       <tr>
                                         <td class="align-middle">日幣</td>
                                         <td class="py-3">
@@ -922,7 +925,6 @@
                                     </tbody>
                                   </table>
                                   <iframe src="https://tw.rter.info/24hr.php?iso=JPY" width="100%" scrolling="no" frameborder="0"></iframe>
-                                  <iframe src="https://tw.rter.info/24hr.php?iso=USD" width="100%" scrolling="no" frameborder="0"></iframe>
                                 </div>
                               </div>
                             </div>
