@@ -886,6 +886,7 @@
                             </div>
                             <div class="card accordion-item">
                               <h2 class="accordion-header" id="headingTwo">
+                                <div style="display: flex;">
                                 <button
                                   type="button"
                                   class="accordion-button collapsed"
@@ -895,16 +896,17 @@
                                   aria-controls="accordionTwo"
                                 >
                                 外幣 : 10000(TWD)
+                                </button>
                                 <button
                                 class="btn btn-primary"
                                 type="button"
                                 data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasEnd"
                                 aria-controls="offcanvasEnd"
-                              >
-                                當日匯率
-                              </button>
+                                >
+                                  當日匯率
                                 </button>
+                                </div>
                               </h2>
                               
                               <div
@@ -1002,12 +1004,14 @@
                     ></button>
                   </div>
                   <div class="offcanvas-body my-auto mx-0 flex-grow-0">
-                    <iframe src="https://tw.rter.info/24hr.php?iso=USD" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
-                    <iframe src="https://tw.rter.info/24hr.php?iso=JPY" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
-                    <iframe src="https://tw.rter.info/24hr.php?iso=EUR" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
-                    <iframe src="https://tw.rter.info/24hr.php?iso=CNY" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
-                    <iframe src="https://tw.rter.info/24hr.php?iso=AUD" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
-                    <button
+                    <div class="card-body" id="vertical-example">
+                      <iframe src="https://tw.rter.info/24hr.php?iso=USD" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
+                      <iframe src="https://tw.rter.info/24hr.php?iso=JPY" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
+                      <iframe src="https://tw.rter.info/24hr.php?iso=EUR" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
+                      <iframe src="https://tw.rter.info/24hr.php?iso=CNY" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
+                      <iframe src="https://tw.rter.info/24hr.php?iso=AUD" width="100%" height="200px" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                      <button
                       type="button"
                       class="btn btn-outline-secondary d-grid w-100"
                       data-bs-dismiss="offcanvas"
