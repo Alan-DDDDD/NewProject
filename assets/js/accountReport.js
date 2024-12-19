@@ -1,7 +1,7 @@
 getSelfData();
 async function getSelfData(){
     //const userid = "F111111111";
-    const userid = "F128933062";
+    const userid = "";
     //var apis = ["getAccount","getMonthReport","getYearReport"];
     var apis = ["Account"];
     $.each(apis,async function(index,item){
